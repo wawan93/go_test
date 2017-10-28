@@ -18,6 +18,10 @@ func Test(t *testing.T) {
 			data:     "wawan",
 			expected: "Hello, wawan!\n",
 		},
+		{
+			data:     "товарищ майор",
+			expected: "Hello, товарищ майор!\n",
+		},
 	}
 
 	for _, test := range tests {
