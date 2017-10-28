@@ -8,7 +8,7 @@ type test struct {
 	actual   string
 }
 
-func Test(t *testing.T) {
+func TestGreeting(t *testing.T) {
 	tests := []test{
 		{
 			data:     "Ivan",
