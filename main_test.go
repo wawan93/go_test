@@ -12,15 +12,15 @@ func TestGreeting(t *testing.T) {
 	tests := []test{
 		{
 			data:     "Ivan",
-			expected: "Hello, Ivan!\n",
+			expected: "Hello, Ivan!",
 		},
 		{
 			data:     "wawan",
-			expected: "Hello, wawan!\n",
+			expected: "Hello, wawan!",
 		},
 		{
 			data:     "товарищ майор",
-			expected: "Hello, товарищ майор!\n",
+			expected: "Hello, товарищ майор!",
 		},
 	}
 
@@ -28,7 +28,7 @@ func TestGreeting(t *testing.T) {
 		test.actual = greeting(test.data)
 
 		if test.actual != test.expected {
-			t.Error("Неверный результат", test.expected, test.actual)
+			t.Error("Неверный результат", test)
 		}
 	}
 }
@@ -37,5 +37,4 @@ func ExampleMain() {
 	main()
 	// Output:
 	// Hello, wawan!
-	//
 }
