@@ -1,7 +1,9 @@
 package main
 
+import "fmt"
+
 func main() {
-	print(greeting("wawan"))
+	fmt.Print(greeting("wawan"))
 }
 
 func greeting(name string) string {

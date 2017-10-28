@@ -28,3 +28,10 @@ func Test(t *testing.T) {
 		}
 	}
 }
+
+func ExampleMain() {
+	main()
+	// Output:
+	// Hello, wawan!
+	//
+}
