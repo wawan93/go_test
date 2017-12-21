@@ -2,8 +2,6 @@ package main
 
 import (
 	"testing"
-	"fmt"
-	"time"
 )
 
 type test struct {
@@ -43,21 +41,3 @@ func ExampleMain() {
 	// Hello, wawan!
 }
 
-func TestChannels(t *testing.T) {
-	mainChannel := make(chan int)
-
-	// fatal error: all goroutines are asleep - deadlock!
-	//mainChannel <- 100
-	//mainChannel <- 101
-
-	go func(c chan int) {
-		for {
-			fmt.Println(<-c)
-			time.Sleep(time.Second)
-		}
-	}(mainChannel)
-
-	for i := 100; i < 105; i++ {
-		mainChannel <- i
-	}
-}
