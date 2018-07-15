@@ -37,4 +37,3 @@ func TestBufferedChannels(t *testing.T) {
 		}
 	}(ch)
 }
-

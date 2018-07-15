@@ -5,12 +5,13 @@ import "testing"
 func TestOverride(t *testing.T) {
 	st := new(SomeNewType)
 
-	cases := []struct{
-		fn func() string
+	cases := []struct {
+		fn       func() string
 		expected string
 	}{
 		{st.SomeFunc, "hello, world!"},
 		{st.SomeType.SomeFunc, "hello"},
+		{st.AnotherInternalFunction, "another"},
 	}
 
 	for _, tc := range cases {

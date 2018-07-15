@@ -40,4 +40,3 @@ func ExampleMain() {
 	// Output:
 	// Hello, wawan!
 }
-
